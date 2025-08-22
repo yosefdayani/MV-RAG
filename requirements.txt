@@ -1,0 +1,16 @@
+torch~=2.5.1
+kiui~=0.2.14
+numpy~=2.0.2
+pillow~=11.0.0
+torchvision~=0.20.1
+transformers~=4.46.2
+xformers~=0.0.28.post3
+einops~=0.8.0
+diffusers~=0.31.0
+safetensors~=0.4.5
+setuptools~=78.1.1
+requests~=2.32.4
+
+## Optional: for retrival using BM25 (pyserini) or Google Images
+# pyserini
+# googleapiclient
