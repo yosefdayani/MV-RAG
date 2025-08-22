@@ -3,7 +3,7 @@ Yosef Dayani, Omer Benishu, Sagie Benaim
 
 | [Project Page](https://yosefdayani.github.io/MV-RAG/) | [Paper](https://arxiv.org/) | [HuggingFace]() | [Benchmark (OOD-Eval)]() |
 
-![teaser](assets/preview.png)
+![teaser](https://yosefdayani.github.io/MV-RAG/static/images/teaser.jpg)
 
 ## 📌 Overview
 MV-RAG is a text-to-3D generation method that retrieves 2D reference images to guide multiview diffusion models. By conditioning on both text and retrieved visual examples, MV-RAG improves realism and consistency for rare or out-of-distribution objects.
@@ -15,12 +15,16 @@ MV-RAG is a text-to-3D generation method that retrieves 2D reference images to g
 We recommend creating a fresh conda environment to run MV-RAG:
 
 ```bash
+# Clone the repository
+git clone https://github.com/yosefdayani/MV-RAG.git
+cd MV-RAG
+
 # Create new environment
 conda create -n mvrag python=3.9 -y
 conda activate mvrag
 
 # Install PyTorch (adjust CUDA version as needed)
-# Example: CUDA 12.4
+# Example: CUDA 12.4, PyTorch 2.5.1
 conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 
 # Install other dependencies
