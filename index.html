@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MV-RAG is a text-to-3D generation method that retrieves 2D images to guide multiview diffusion, improving realism and consistency for rare concepts.">
+  <meta property="og:title" content="MV-RAG: Retrieval Augmented Multiview Diffusion"/>
+  <meta property="og:description" content="MV-RAG is a text-to-3D generation method that retrieves 2D images to guide multiview diffusion, improving realism and consistency for rare concepts."/>
+  <meta property="og:url" content="https://yosefdayani.github.io/MV-RAG/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/teaser.png" />
+  <meta property="og:image:width" content="1176"/>
+  <meta property="og:image:height" content="464"/>
+
+  <meta name="twitter:title" content="MV-RAG: Retrieval Augmented Multiview Diffusion">
+  <meta name="twitter:description" content="MV-RAG is a text-to-3D generation method that retrieves 2D images to guide multiview diffusion, improving realism and consistency for rare concepts.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="mvrag, MV-RAG, computer vision, 3D generation, diffusion models, multiview generation, image retrieval, deep learning, stable diffusion, IPAdapter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MV-RAG: Retrieval Augmented Multiview Diffusion</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MV-RAG: Retrieval Augmented Multiview Diffusion</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Yosef Dayani</a>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Omer Benishu</a>,</span>
+                  <span class="author-block">
+                    <a href="https://sagiebenaim.github.io/" target="_blank">Sagie Benaim</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">The Hebrew University of Jerusalem</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                      <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/yosefdayani/MV-RAG" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                   <!-- OOD-Eval link -->
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Benchmark (OOD-Eval)</span>
+                </a>
+              </span>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser Image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.png">
+    </div>
+  </div>
+</section>
+<!-- End teaser Image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Text-to-3D generation approaches have advanced significantly by leveraging pretrained 2D diffusion priors, producing high-quality and 3D-consistent outputs. However, they often fail to produce out-of-domain (OOD) or rare concepts, yielding inconsistent or inaccurate results. To this end, we propose MV-RAG, a novel text-to-3D pipeline that first retrieves relevant 2D images from a large in-the-wild 2D database and then conditions a multiview diffusion model on these images to synthesize consistent and accurate multiview outputs. Training such a retrieval-conditioned model is achieved via a novel hybrid strategy bridging structured multiview data and diverse 2D image collections. This involves training on multiview data using augmented conditioning views that simulate retrieval variance for view-specific reconstruction, alongside training on sets of retrieved real-world 2D images using a distinctive held-out view prediction objective: the model predicts the held-out view from the other views to infer 3D consistency from 2D data. To facilitate a rigorous OOD evaluation, we introduce a new collection of challenging OOD prompts. Experiments against state-of-the-art text-to-3D, image-to-3D, and personalization baselines show that our approach significantly improves 3D consistency, photorealism, and text adherence for OOD/rare concepts, while maintaining competitive performance on standard benchmarks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Teaser Image2-->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-11/12 has-text-centered">
+        <figure class="image">
+          <img src="static/images/teaser2.png" alt="Teaser visualization">
+          <figcaption class="has-text-grey mt-2">
+            <em>MV-RAG extends the strengths of RAG by addressing challenges such as out-of-domain generations (e.g., ‘Bolognese dog’) and emerging concepts introduced after training (e.g., ‘Labubu doll’).</em>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End teaser Image2 -->
+
+
+
+<!-- Method Section -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+
+    <!-- Section title -->
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        <h2 class="title is-3">Method</h2>
+      </div>
+    </div>
+
+    <!-- Main Method image -->
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        <figure class="image">
+          <img src="static/images/method.png" alt="MV-RAG Method Diagram">
+        </figure>
+      </div>
+    </div>
+
+    <!-- Method text (inference mode) -->
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <p>
+            MV-RAG advances multiview generation by combining a pretrained multiview model’s internal knowledge with external visual cues retrieved from a large image database. At inference, the retrieved 2D images are encoded into tokens using an image encoder followed by a learned resampler. Within the multiview diffusion model, 3D self-attention layers enforce consistency across the generated views. Each cross-attention layer then operates in two parallel branches: one conditioned on text tokens and the other on retrieved image tokens. Their outputs are fused using a fusion coefficient predicted by the Prior-Guided Attention module.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prior-guided Attention subsection -->
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+<!--        <h3 class="title is-4">Prior-guided Attention</h3>-->
+        <div class="content has-text-justified">
+          <p>
+            <strong>Prior-Guided Attention:</strong> This mechanism adaptively balances what the base model already knows with what the retrieved images contribute in the Decoupled Cross-Attention layers. When the concept is familiar to the model, the model leans more on its internal prior during generation, emphasizing the text tokens. For rare or out-of-distribution concepts, it gives greater weight to the retrieved image tokens. To achieve this, the model first generates a candidate output using its prior knowledge, compares it with the retrieved images to get a confidence score, and then fuses the two feature maps accordingly to guide the final multiview reconstruction
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Training subsection -->
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        <div class="has-text-left mb-3">
+          <h3 class="title is-4">Training</h3>
+        </div>
+        <figure class="image">
+          <img src="static/images/train.png" alt="Training Schemes">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            To achieve both fidelity and 3D consistency when conditioning on multiple real-world images, MV-RAG is trained with a hybrid strategy that alternates between two modes.
+          </p>
+          <p>
+            <strong>3D Mode:</strong> In 3D mode, the model trains on synthetic 3D datasets. Given several augmented renderings of the same 3D object, it predicts target multiview while enforcing consistency across them. This teaches the model to distribute visual features from retrieved images in a geometrically correct way, resulting in accurate and coherent 3D reconstructions.
+          </p>
+          <p>
+            <strong>2D Mode:</strong> n 2D mode, the model trains on a real-world image dataset. Here, K+1 images of the same concept are retrieved: K images are provided as the retrieval condition, and the model is tasked with generating the held-out (K+1)th view. This trains the model to generalize from diverse real-world images, a key ability for inference in the retrieval-augmented setting.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Method Section -->
+
+
+<!-- Comparison Section -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        <h2 class="title is-3">Comparison Results</h2>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        <figure class="image">
+          <img src="static/images/compare.png" alt="Comparison of our method against baselines">
+          <figcaption class="has-text-grey mt-2">
+            <em>MV-RAG achieves state-of-the-art results on out-of-distribution (OOD) objects, outperforming both text-conditioned approaches (middle row) and image(s)-conditioned approaches (bottom row).</em>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Comparison Section -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
