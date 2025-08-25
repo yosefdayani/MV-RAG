@@ -47,6 +47,13 @@ This repository is based on [MVDream](https://github.com/bytedance/MVDream) and 
 
 ## 📖 Citation
 ``` bibtex
-@article{
+@misc{dayani2025mvragretrievalaugmentedmultiview,
+      title={MV-RAG: Retrieval Augmented Multiview Diffusion}, 
+      author={Yosef Dayani and Omer Benishu and Sagie Benaim},
+      year={2025},
+      eprint={2508.16577},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.16577}, 
 }
 ```
