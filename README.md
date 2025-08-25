@@ -39,12 +39,14 @@ Then the model weights should appear as MV-RAG/mvrag/...
 
 ---
 ## 🚀 Usage Example
+You could prompt the model on your retrieved local images by:
 ```bash
 python main.py \
 --prompt "Cadillac 341 automobile car" \
 --retriever simple \
 --folder_path "assets/Cadillac 341 automobile car" \
 --seed 0 \
+--k 4 \
 --azimuth_start 45
 ```
 
