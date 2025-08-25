@@ -30,7 +30,14 @@ conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=
 # Install other dependencies
 pip install -r requirements.txt
 ```
+___
+## 🏋️ Weights
 
+MV-RAG weights are available on [Hugging Face](https://huggingface.co/yosepyossi/mvrag).
+
+Afterwards the weights should be in MV-RAG/mvrag/...
+
+---
 ## 🚀 Usage Example
 ```bash
 python main.py \
