@@ -6,7 +6,7 @@ Yosef Dayani, Omer Benishu, Sagie Benaim
 ![teaser](https://yosefdayani.github.io/MV-RAG/static/images/teaser.jpg)
 
 ## 📌 Overview
-MV-RAG is a text-to-3D generation method that retrieves 2D reference images to guide multiview diffusion models. By conditioning on both text and retrieved visual examples, MV-RAG improves realism and consistency for rare or out-of-distribution objects.
+MV-RAG is a text-to-3D generation method that retrieves 2D reference images to guide a multiview diffusion model. By conditioning on both text and multiple real-world 2D images, MV-RAG improves realism and consistency for rare/out-of-distribution or newly emerging objects.
 
 ---
 
