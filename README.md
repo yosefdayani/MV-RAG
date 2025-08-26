@@ -1,7 +1,7 @@
 # MV-RAG: Retrieval Augmented Multiview Diffusion
 Yosef Dayani, Omer Benishu, Sagie Benaim
 
-| [Project Page](https://yosefdayani.github.io/MV-RAG/) | [Paper](https://arxiv.org/pdf/2508.16577v1) | [HuggingFace](https://huggingface.co/yosepyossi/mvrag) | [Benchmark (OOD-Eval)](https://huggingface.co/datasets/yosepyossi/OOD-Eval) |
+| [Project Page](https://yosefdayani.github.io/MV-RAG/) | [Paper](https://arxiv.org/pdf/2508.16577v1) | [HuggingFace](https://huggingface.co/papers/2508.16577) | [Weights](https://huggingface.co/yosepyossi/mvrag) | [Benchmark (OOD-Eval)](https://huggingface.co/datasets/yosepyossi/OOD-Eval) |
 
 ![teaser](https://yosefdayani.github.io/MV-RAG/static/images/teaser.jpg)
 
