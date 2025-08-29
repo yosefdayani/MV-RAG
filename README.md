@@ -56,6 +56,10 @@ python main.py \
 --azimuth_start 45  # or 0 for front view
 ```
 
+To see all command options run
+```bash
+python main.py --help
+```
 
 ## 🙌 Acknowledgement
 This repository is based on [MVDream](https://github.com/bytedance/MVDream) and adapted from [MVDream Diffusers](https://github.com/ashawkey/mvdream_diffusers). We would like to thank the authors of these works for publicly releasing their code.
