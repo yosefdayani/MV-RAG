@@ -72,22 +72,26 @@ def main():
         torch_dtype=torch.float16,
     )
     pipe = pipe.to("cuda")
-    image = pipe(args.prompt,
-                 retrieved_images,
-                 guidance_scale=5,
-                 num_inference_steps=args.num_inference_steps,
-                 num_initial_steps=args.num_initial_steps,
-                 elevation=args.elevation,
-                 azimuth_start=args.azimuth_start,
-                 seed=args.seed
-                 )
-    grid = np.concatenate(
-        [
-            np.concatenate([image[0], image[2]], axis=0),
-            np.concatenate([image[1], image[3]], axis=0),
-        ],
-        axis=1,
-    )
+
+    rows = []
+    for i in range(5):
+        current_seed = args.seed + i if args.seed is not None else None
+        images = pipe(
+            args.prompt,
+            retrieved_images,
+            guidance_scale=5,
+            num_inference_steps=args.num_inference_steps,
+            num_initial_steps=args.num_initial_steps,
+            elevation=args.elevation,
+            azimuth_start=args.azimuth_start,
+            seed=current_seed,
+        )
+
+        row = np.concatenate([images[0], images[1], images[2], images[3]], axis=1)
+        rows.append(row)
+
+    grid = np.concatenate(rows, axis=0)
+
     output_path = os.path.join(args.outputs_path, f"{args.prompt}.png")
     kiui.write_image(output_path, grid)
 

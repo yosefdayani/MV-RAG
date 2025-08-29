@@ -10,6 +10,9 @@ diffusers~=0.31.0
 safetensors~=0.4.5
 setuptools~=78.1.1
 requests~=2.32.4
+scipy~=1.13.1
+opencv-python~=4.10.0.84
+rich~=13.9.4
 
 ## Optional: for retrival using BM25 (pyserini) or Google Images
 # pyserini

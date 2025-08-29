@@ -34,6 +34,12 @@ ___
 ## 🏋️ Weights
 
 MV-RAG weights are available on [Hugging Face](https://huggingface.co/yosepyossi/mvrag).
+```bash
+# Make sure git-lfs is installed (https://git-lfs.com)
+git lfs install
+
+git clone https://huggingface.co/yosepyossi/mvrag
+```
 
 Then the model weights should appear as MV-RAG/mvrag/...
 
