@@ -53,7 +53,7 @@ python main.py \
 --folder_path "assets/Cadillac 341 automobile car" \
 --seed 0 \
 --k 4 \
---azimuth_start 45
+--azimuth_start 45  # or 0 for front view
 ```
 
 
